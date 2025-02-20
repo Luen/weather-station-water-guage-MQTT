@@ -1,1 +1,3 @@
 /backups/*
+grafana.env
+influxdb.env

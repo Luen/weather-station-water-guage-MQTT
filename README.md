@@ -1,18 +1,21 @@
 # weather-station-water-guage-MQTT
- 
+
 https://github.com/Luen/weather-station-water-guage-arduino/
 
 Based on https://github.com/sukesh-ak/setup-mosquitto-with-docker
 
-# docker-influxdb-grafana-nodered-mqtt
+## docker-influxdb-grafana-nodered-mqtt
 
 A docker-compose application that combines the influxdb, grafana, nodered and mqtt.
 
 ## Configuring and starting containers (only run once initially)
-On the the first run use the -c option to initially configure the images. 
+
+On the the first run use the -c option to initially configure the images.
+
 ```
 ./run.sh -c
 ```
+
 This will prompt for a an admin username and password for the influxdb database. Ensure that the __INFLUXDB_HTTP_AUTH_ENABLED__ variable is set to false in the **influxdb.env** file, otherwise the script will not be able to create the user. Once the configuration is done this variable can be set back to true and the containers restarted. Then you can login to influxd with your admin password and username.
 
 ## Starting the containers 
